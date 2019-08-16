@@ -1,0 +1,1 @@
+In this directory temporary setup files are stored.
