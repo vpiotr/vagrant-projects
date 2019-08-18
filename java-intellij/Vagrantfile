@@ -65,6 +65,11 @@ Vagrant.configure("2") do |config|
      
      # Setup name 
      vb.name = "Java Dev Machine" 
+
+     if Vagrant.has_plugin?("vagrant-cachier")
+	config.cache.scope = :box
+        config.cache.enable :apt
+     end
    end
   #
   # View the documentation for the provider you are using for more

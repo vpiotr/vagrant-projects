@@ -8,12 +8,15 @@ Supported host operating systems:
 * Windows 7 64 bit SP1
 * Linux Mint 18.x, 19.x
 
-Installed components in guest machine (VM):
-* Debian 10 with GUI
-* OpenJDK
-* Intellij IDEA
-* Git
-* Maven
+Components installed during VM build in guest machine:
+* Debian 10 "buster" with GNOME 3
+* OpenJDK 8 
+* [Intellij IDEA](https://www.jetbrains.com/idea/) Community Edition
+* [Git](https://git-scm.com/)
+* [Maven](https://maven.apache.org/)
+* [Docker](https://www.docker.com/)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [VisualVM](https://visualvm.github.io/)
 
 # Prerequisites
 
@@ -22,17 +25,15 @@ Software required on host machine:
 * Vagrant
 * vbguest (Vagrant plugin)
 
+For prerequisites installation details, see README from parent directory.
+
 # Setup Procedure
 
 1) unpack attached files in a new directory
 
 2) go to this directory and open console
 
-3) setup vagrant (only once after vagrant install)
-
-``vagrant plugin install vagrant-vbguest``
-
-4) run vm setup
+3) run vm setup
 
 ``vagrant up``
 
@@ -40,11 +41,17 @@ or with debug:
 
 ``vagrant up --debug``
 
-5) setup vagrant guest additions
+4) (optionally) setup VBox guest additions
+
+If clipboard sharing does not work, run:
 
 ``vagrant vbguest --do install``
 
-6) (optionally, for GUI) restart and continue install procedure
+5) (optionally, for GUI) restart 
+
+``vagrant reload``
+
+or when setup failed in the middle:
 
 ``vagrant reload --provision``
     

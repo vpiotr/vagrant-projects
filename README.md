@@ -29,10 +29,29 @@ To install it, visit the following web sites:
 * http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html
 * https://www.virtualbox.org/wiki/Downloads
 
-# Install Vagrant
+## Vagrant
+
+It's required for all sub-projects.
 
 * download link: https://www.vagrantup.com/downloads.html
 
+## vagrant-vbguest
+
+For automatic VirtualBox Guest Additions configuration install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest):
+
+``vagrant plugin install vagrant-vbguest``    
+ 
+# Optional Addons 
+
+## vagrant-cachier
+
+For caching apt/yum packages install [vagrant-cachier](https://github.com/fgrehm/vagrant-cachier):
+
+``vagrant plugin install vagrant-cachier``
+
 # See also
 * [Vagrant Cheat Sheet](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)
+* [vagrant-cachier - usage](http://fgrehm.viewdocs.io/vagrant-cachier/usage/)
+
+
 
